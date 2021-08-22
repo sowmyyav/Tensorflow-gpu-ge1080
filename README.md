@@ -13,15 +13,12 @@ I first installed visual studio 2017, cuda 10, cuDNN 7.4, TensorFlow 2.0. After 
 
 Then I installed visual studio 2019, CUDA 11.2, cuDNN 8.1, tensorflow_gpu-2.5.0. 
 
-Again after detecting GPU, successfully importing TensorFlow and Keras, I got this error while fitting LSTM model : "NotImplementedError: Cannot convert a symbolic Tensor (bidirectional/forward_lstm/strided_slice:0) to a numpy array. This error may indicate that you're trying to pass a Tensor to a NumPy call, which is not supported". 
-This was solved by reinstalling numpy and TensorFlow upgraded to 2.6.0 (source: tensorflow/models#9706).
-
-In the official TensorFlow website https://www.tensorflow.org/install/gpu, software requirements for CUDA® 11.2 requires Nvidia GPU driver version to be 450.80.02 or higher. The latest driver version installed for GTX 1080 card will be 471.68.  So we can install CUDA 11.2 version (I didn't try the latest CUDA version i.e., 11.4,  as many sources advised to stay away from the latest versions to avoid errors from bugs and fixes). 
+In the official TensorFlow website https://www.tensorflow.org/install/gpu, software requirements for CUDA® 11.2 requires Nvidia GPU driver version to be 450.80.02 or higher. The latest driver version installed for GTX 1080 card was 471.68.  So we can install CUDA 11.2 version (I didn't try the latest CUDA version i.e., 11.4,  as many sources advised to stay away from the latest versions to avoid errors from bugs and fixes). 
 
 2. To begin fresh installations, delete all the older versions of visual studio, Nvidia related drivers (cuda, cuDNN, gpu drivers). 
-For more informoation see https://www.youtube.com/watch?v=KZFn0dvPZUQ
+For more information see https://www.youtube.com/watch?v=KZFn0dvPZUQ
 
-a) Download Visual studio 2019 before installing Nvidia GPU drivers, CUDA and cuDNN from here -> https://visualstudio.microsoft.com/downloads/  
+3. Download Visual studio 2019 before installing Nvidia GPU drivers, CUDA and cuDNN from here -> https://visualstudio.microsoft.com/downloads/  
 Click on community version for free download.
 
 ![MS VISUAL STUDIO 2019 download](https://user-images.githubusercontent.com/87984816/130339708-5889321e-4909-4fb6-b7ce-a9ebb7596344.PNG)
@@ -36,20 +33,20 @@ continue without workloads
 
 After installation, restart the system.
 
-b) Install Nvidia GPU driver from here -> https://www.nvidia.com/en-gb/geforce/drivers/
+4. Install Nvidia GPU driver from here -> https://www.nvidia.com/en-gb/geforce/drivers/
 Enter GPU card information and click search. Download and install (471.68-desktop-win10-win11-64bit-international-nsd-dch-whql .exe)
 
 ![nvidiagpu_driver install](https://user-images.githubusercontent.com/87984816/130339522-e30640f2-d8cb-4857-8b50-be433780f16f.PNG)
 
 Follow on-screen prompts. Install graphics driver.. COMPLETE
 
-c) Next Install CUDA 11.2.2 from here  -> https://developer.nvidia.com/cuda-toolkit-archive
+5. Next Install CUDA 11.2.2 from here  -> https://developer.nvidia.com/cuda-toolkit-archive
 
 Select Windows, 10, exe (local) and download.
 ![cuda install step1](https://user-images.githubusercontent.com/87984816/130339509-3c640730-355c-4937-8d67-5c43fec2c923.PNG)
 
 
-d) Install cuDNN 8.1 by registering to Nvidia developer program membership here-> https://developer.nvidia.com/cuda-toolkit-archive
+6. Install cuDNN 8.1 by registering to Nvidia developer program membership here-> https://developer.nvidia.com/cuda-toolkit-archive
 
 I downloaded cuDNN v8.1.1 (February 26th 2021), for CUDA 11.0, 11.1 and 11.2
 cudnn-11.2-windows-x64-v8.1.1.33.zip
@@ -61,7 +58,7 @@ Create new folder C:\tools\  and unzip contents to here.
 Inside the zip folder, there is a CUDA folder containing bin, include and lib folders. Copy and paste the files inside bin, lib and include of cuDNN to bin, lib and include of CUDA at C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2 respectively.
 
 
-Then set path variables:
+7. Then set path variables:
 
 Search -> type - Edit the system environment variables -> click Environment Variables -> Click Path under System Variables
 
@@ -91,9 +88,9 @@ https://www.youtube.com/watch?v=KZFn0dvPZUQ
 Source: TensorFlow site, https://www.tensorflow.org/install/gpu
 
 
-3. Install Anaconda latest version from here -> https://www.anaconda.com/products/individual
+8. Install Anaconda latest version from here -> https://www.anaconda.com/products/individual
 
-Download and install, click on add Anaconda3 to my path environment variable
+Download and install, click on "Add Anaconda3 to my path environment variable"
 
 ![Anaconda installer_step2](https://user-images.githubusercontent.com/87984816/130340542-9f86d9a1-2279-411e-98c8-48ba1b38bb8f.PNG)
 
@@ -111,7 +108,7 @@ conda install tensorflow-gpu==2.5.0
 
 Validation
 
-Type "python"
+Type "python" in tf_gpu environment
 import tensorflow as tf 
 
 You should get this message:  "I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll"
