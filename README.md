@@ -1,4 +1,4 @@
-# Install Tensorflow-GPU-GeForce GTX1080
+# Install Tensorflow-GPU on Windows 10 with GeForce GTX1080
 Steps followed to install TensorFlow GPU on Windows 10 using Nvidia GeForce GTX 1080 card, Tensorflow 2.6, CUDA 11.2 and cuDNN 8.1. In this case, TensorFlow-GPU was installed for implementing deep learning models. There were many failures from the start till the end with several re-installations and restart of the system. 
 1. First step is to figure out which combination of versions to be installed for TensorFlow, python, CUDA, visual studio and cuDNN. 
 If visual studio, CUDA, TensorFlow and cuDNN versions are not matched, then we get dll error when we execute import TensorFlow. In the later stages, after successfully importing TensorFlow, errors may arise due to the mismatch of python, numpy and TensorFlow versions.
