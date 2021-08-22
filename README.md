@@ -18,7 +18,7 @@ In the official TensorFlow website https://www.tensorflow.org/install/gpu, softw
 2. To begin fresh installations, delete all the older versions of visual studio, Nvidia related drivers (cuda, cuDNN, gpu drivers). 
 For more information see https://www.youtube.com/watch?v=KZFn0dvPZUQ
 
-3. Download Visual studio 2019 before installing Nvidia GPU drivers, CUDA and cuDNN from here -> https://visualstudio.microsoft.com/downloads/  
+3. Install Visual studio 2019 before installing Nvidia GPU drivers, CUDA and cuDNN. Link to download visual studio -> https://visualstudio.microsoft.com/downloads/  
 Click on community version for free download.
 
 ![MS VISUAL STUDIO 2019 download](https://user-images.githubusercontent.com/87984816/130339708-5889321e-4909-4fb6-b7ce-a9ebb7596344.PNG)
