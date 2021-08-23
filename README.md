@@ -9,7 +9,7 @@ source: https://www.tensorflow.org/install/source_windows
 ![build config](https://user-images.githubusercontent.com/87984816/130339580-45f8c445-209c-40a6-80ef-fd19b714d547.PNG)
 
 
-I first installed visual studio 2017, cuda 10, cuDNN 7.4, TensorFlow 2.0. After successful installation of TensorFlow GPU and passing the checks related to GPU and cuda availability, I got import error on importing Keras requiring TensorFlow 2.2 or higher. 
+I first installed Visual Studio 2017, CUDA 10, cuDNN 7.4, TensorFlow 2.0. After successful installation of TensorFlow GPU and passing the checks related to GPU and cuda availability, I got import error on importing Keras requiring TensorFlow 2.2 or higher. 
 
 Then I installed visual studio 2019, CUDA 11.2, cuDNN 8.1, tensorflow_gpu-2.5.0. 
 
@@ -31,7 +31,7 @@ continue without workloads
 
 ![MS VISUAL STUDIO 2019_step2](https://user-images.githubusercontent.com/87984816/130339711-6b505e3e-1218-485e-a6b3-11514110d5bc.PNG)
 
-After installation, restart the system.
+After completing the Visual Studio installation, restart the system.
 
 4. Install Nvidia GPU driver from here -> https://www.nvidia.com/en-gb/geforce/drivers/
 Enter GPU card information and click search. Download and install (471.68-desktop-win10-win11-64bit-international-nsd-dch-whql .exe)
@@ -87,6 +87,8 @@ https://www.youtube.com/watch?v=KZFn0dvPZUQ
 
 Source: TensorFlow site, https://www.tensorflow.org/install/gpu
 
+Check CUDA version using nvidia-smi and nvcc --version 
+Here is the link for more information https://varhowto.com/check-cuda-version/
 
 8. Install Anaconda latest version from here -> https://www.anaconda.com/products/individual
 
@@ -102,13 +104,14 @@ C:\  ..... \anaconda3
 After installation, open anaconda command prompt.
 Create new environment on Python 3.8 (i didn't try 3.9, try if it works without any error)
 
-conda create --name tf_gpu python=3.8
+conda create --name tf_gpu python=3.8 
 conda activate tf_gpu
 conda install tensorflow-gpu==2.5.0
 
 Validation
 
 Type "python" in tf_gpu environment
+
 import tensorflow as tf 
 
 You should get this message:  "I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll"
@@ -156,6 +159,7 @@ Finally run your deep learning model "model.fit" and check GPU performance on Ta
 I got this error "NotImplementedError: Cannot convert a symbolic Tensor (bidirectional/forward_lstm/strided_slice:0) to a numpy array. This error may indicate that you're trying to pass a Tensor to a NumPy call, which is not supported."
 
 After re-installation using
+
 pip uninstall tensorflow
 pip install --upgrade tensorflow (source: https://www.tensorflow.org/install/pip#virtual-environment-install)
 pip uninstall numpy
@@ -177,6 +181,5 @@ https://medium.com/featurepreneur/install-tensorflow-with-gpu-support-for-deep-l
 https://github.com/kartikvega/TensorFlow-Install-on-Win-10-w-1080TI
 
 https://discuss.tensorflow.org/t/tensorflow-2-5-with-gpu-device-python-3-9-cuda-11-2-2-cudnn-8-1-1-conda-environment-windows-10/1385
-
 
 
