@@ -88,6 +88,7 @@ https://www.youtube.com/watch?v=KZFn0dvPZUQ
 Source: TensorFlow site, https://www.tensorflow.org/install/gpu
 
 Check CUDA version using nvidia-smi and nvcc --version 
+
 Here is the link for more information https://varhowto.com/check-cuda-version/
 
 8. Install Anaconda latest version from here -> https://www.anaconda.com/products/individual
@@ -161,8 +162,11 @@ I got this error "NotImplementedError: Cannot convert a symbolic Tensor (bidirec
 After re-installation using
 
 pip uninstall tensorflow
+
 pip install --upgrade tensorflow (source: https://www.tensorflow.org/install/pip#virtual-environment-install)
+
 pip uninstall numpy
+
 pip install numpy
 
 I got Tensor Flow Version: 2.6.0, Keras Version: 2.6.0, Python 3.8.11, Numpy 1.21.2, GPU is available.
