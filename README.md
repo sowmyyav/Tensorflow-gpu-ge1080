@@ -13,7 +13,7 @@ I first installed visual studio 2017, cuda 10, cuDNN 7.4, TensorFlow 2.0. After 
 
 Then I installed visual studio 2019, CUDA 11.2, cuDNN 8.1, tensorflow_gpu-2.5.0. 
 
-In the official TensorFlow website https://www.tensorflow.org/install/gpu, software requirements for CUDA® 11.2 requires Nvidia GPU driver version to be 450.80.02 or higher. The latest driver version installed for GTX 1080 card was 471.68.  So we can install CUDA 11.2 version (I didn't try the latest CUDA version i.e., 11.4,  as many sources advised to stay away from the latest versions to avoid errors from bugs and fixes). 
+In the official TensorFlow website https://www.tensorflow.org/install/gpu, software requirements for CUDA® 11.2 requires Nvidia GPU driver version to be 450.80.02 or higher. The latest driver version installed for GTX 1080 card was 471.68.  So we can install CUDA 11.2 version for GTX 1080 card(I didn't try the latest CUDA version i.e., 11.4,  as many sources advised to stay away from the latest versions to avoid errors from bugs and fixes). 
 
 2. To begin fresh installations, delete all the older versions of visual studio, Nvidia related drivers (cuda, cuDNN, gpu drivers). 
 For more information see https://www.youtube.com/watch?v=KZFn0dvPZUQ
