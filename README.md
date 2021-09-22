@@ -1,17 +1,18 @@
 # Install Tensorflow-GPU on Windows 10 with Nvidia GeForce GTX1080
-Steps followed to install TensorFlow GPU on Windows 10 using Nvidia GeForce GTX 1080 card, Tensorflow 2.6, CUDA 11.2 and cuDNN 8.1 are detailed here. In this case, TensorFlow-GPU was installed for implementing deep learning models. There were many failures from the start till the end requiring several software re-installations and restarting the system many times. 
+Steps followed to install TensorFlow GPU on Windows 10 using Nvidia GeForce GTX 1080 card, Tensorflow 2.6, CUDA 11.2 and cuDNN 8.1 are detailed here. In this case, TensorFlow-GPU was installed for implementing deep learning models. There were many failures from the start till the end requiring several software re-installations and restarts of the system. 
 1. First step is to figure out which combination of versions to be installed for TensorFlow, python, CUDA, visual studio and cuDNN. 
-If visual studio, CUDA, TensorFlow and cuDNN versions are not matched, then we get dll error when we execute import TensorFlow. In the later stages, after successfully importing TensorFlow, errors may arise due to the mismatch of python, numpy and TensorFlow versions.
 
-The below tested build configurations shows the matching versions of TensorFlow, python, Microsoft visual studio (MSVC), cuDNN and CUDA.
+Note: If visual studio, CUDA, TensorFlow and cuDNN versions are not matched, then you get dll error while importing TensorFlow. Also some error may occur after successfully importing TensorFlow due to the mismatch of Python, numpy and TensorFlow versions.
+
+The below tested build configuration shows the matching versions of TensorFlow, python, Microsoft visual studio (MSVC), cuDNN and CUDA.
 source: https://www.tensorflow.org/install/source_windows
 
 ![build config](https://user-images.githubusercontent.com/87984816/130339580-45f8c445-209c-40a6-80ef-fd19b714d547.PNG)
 
 
-I first installed Visual Studio 2017, CUDA 10, cuDNN 7.4, TensorFlow 2.0. After successful installation of TensorFlow GPU and passing the checks related to GPU and cuda availability, I got import error on importing Keras requiring TensorFlow 2.2 or higher. 
+first installed Visual Studio 2017, CUDA 10, cuDNN 7.4, TensorFlow 2.0. After successful installation of TensorFlow GPU and passing the checks related to GPU and cuda availability, I got import error on importing Keras requiring TensorFlow 2.2 or higher. 
 
-Then I installed visual studio 2019, CUDA 11.2, cuDNN 8.1, tensorflow_gpu-2.5.0. 
+Then installed visual studio 2019, CUDA 11.2, cuDNN 8.1, tensorflow_gpu-2.5.0. 
 
 In the official TensorFlow website https://www.tensorflow.org/install/gpu, software requirements for CUDA® 11.2 requires Nvidia GPU driver version to be 450.80.02 or higher. The latest driver version installed for GTX 1080 card was 471.68.  So we can install CUDA 11.2 version for GTX 1080 card(I didn't try the latest CUDA version i.e., 11.4,  as many sources advised to stay away from the latest versions to avoid errors from bugs and fixes). 
 
