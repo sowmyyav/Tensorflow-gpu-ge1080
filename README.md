@@ -4,22 +4,17 @@ Steps followed to install TensorFlow GPU on Windows 10 using Nvidia GeForce GTX 
 
 Note: If visual studio, CUDA, TensorFlow and cuDNN versions are not matched, then you get dll error while importing TensorFlow. Also some error may occur after successfully importing TensorFlow due to the mismatch of Python, numpy and TensorFlow versions.
 
-The below tested build configuration shows the matching versions of TensorFlow, python, Microsoft visual studio (MSVC), cuDNN and CUDA.
+The matching versions of TensorFlow, python, Microsoft visual studio (MSVC), cuDNN and CUDA are shown below.
 source: https://www.tensorflow.org/install/source_windows
 
 ![build config](https://user-images.githubusercontent.com/87984816/130339580-45f8c445-209c-40a6-80ef-fd19b714d547.PNG)
 
-
-first installed Visual Studio 2017, CUDA 10, cuDNN 7.4, TensorFlow 2.0. After successful installation of TensorFlow GPU and passing the checks related to GPU and cuda availability, I got import error on importing Keras requiring TensorFlow 2.2 or higher. 
-
-Then installed visual studio 2019, CUDA 11.2, cuDNN 8.1, tensorflow_gpu-2.5.0. 
-
-In the official TensorFlow website https://www.tensorflow.org/install/gpu, software requirements for CUDA® 11.2 requires Nvidia GPU driver version to be 450.80.02 or higher. The latest driver version installed for GTX 1080 card was 471.68.  So we can install CUDA 11.2 version for GTX 1080 card(I didn't try the latest CUDA version i.e., 11.4,  as many sources advised to stay away from the latest versions to avoid errors from bugs and fixes). 
+The official TensorFlow website https://www.tensorflow.org/install/gpu, mentions CUDA® 11.2 requires Nvidia GPU driver version to be 450.80.02 or higher. The latest driver version installed for GTX 1080 card was 471.68.  So we can install CUDA 11.2 version for GTX 1080 card(I didn't try the latest CUDA version i.e., 11.4,  as many sources advised to stay away from the latest versions to avoid errors from bugs and fixes). 
 
 2. To begin fresh installations, delete all the older versions of visual studio, Nvidia related drivers (cuda, cuDNN, gpu drivers). 
 For more information see https://www.youtube.com/watch?v=KZFn0dvPZUQ
 
-3. Install Visual studio 2019 before installing Nvidia GPU drivers, CUDA and cuDNN. Link to download visual studio -> https://visualstudio.microsoft.com/downloads/  
+3. Install Visual studio 2019 before installing Nvidia GPU drivers, CUDA and cuDNN. Link to download visual studio is here -> https://visualstudio.microsoft.com/downloads/  
 Click on community version for free download.
 
 ![MS VISUAL STUDIO 2019 download](https://user-images.githubusercontent.com/87984816/130339708-5889321e-4909-4fb6-b7ce-a9ebb7596344.PNG)
@@ -80,7 +75,7 @@ C:\tools\cuda\bin
 
 ![set path variable2](https://user-images.githubusercontent.com/87984816/130339639-f0815c32-78b2-4d2f-a26f-83d50b11e871.PNG)
 
-For more details, look at these videos
+For more details, look at these videos:
 
 https://www.youtube.com/watch?v=qrkEYf-YDyI
 
