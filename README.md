@@ -42,7 +42,7 @@ Select Windows, 10, exe (local) and download.
 ![cuda install step1](https://user-images.githubusercontent.com/87984816/130339509-3c640730-355c-4937-8d67-5c43fec2c923.PNG)
 
 
-6. Install cuDNN 8.1 by registering to Nvidia developer program membership here-> https://developer.nvidia.com/cuda-toolkit-archive
+6. Install cuDNN 8.1 by registering to Nvidia developer program membership here-> https://developer.nvidia.com/rdp/cudnn-archive
 
 I downloaded cuDNN v8.1.1 (February 26th 2021), for CUDA 11.0, 11.1 and 11.2
 cudnn-11.2-windows-x64-v8.1.1.33.zip
